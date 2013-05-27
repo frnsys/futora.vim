@@ -13,6 +13,7 @@ let s:yellow = "f0c674"
 let s:green = "4BF79F"
 let s:aqua = "34BFAC"
 let s:blue = "33CDFD"
+let s:darkblue = "15acdb"
 let s:purple = "C678E6"
 let s:window = "262626"
 let s:gray = "585858"
@@ -339,7 +340,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("htmlTag", s:gray, "", "")
 	call <SID>X("htmlEndTag", s:gray, "", "")
 	call <SID>X("htmlTagName", s:blue, "", "")
-	call <SID>X("htmlArg", s:red, "", "")
+	call <SID>X("htmlArg", s:darkblue, "", "")
 	call <SID>X("htmlScriptTag", s:red, "", "")
 
 	" Diff Highlighting
