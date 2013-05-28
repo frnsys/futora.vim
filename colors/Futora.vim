@@ -343,6 +343,13 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("htmlArg", s:darkblue, "", "")
 	call <SID>X("htmlScriptTag", s:red, "", "")
 
+    " (S)CSS Highlighting
+	call <SID>X("cssPositioningAttr", s:green, "", "")
+	call <SID>X("cssUIAttr", s:green, "", "")
+	call <SID>X("cssFlexibleBoxAttr", s:green, "", "")
+	call <SID>X("cssTextAttr", s:green, "", "")
+	call <SID>X("cssBorderOutlineAttr", s:green, "", "")
+
 	" Diff Highlighting
 	call <SID>X("diffAdded", s:green, "", "")
 	call <SID>X("diffRemoved", s:red, "", "")
