@@ -335,7 +335,8 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("javaScriptRepeat", s:purple, "", "")
 	call <SID>X("javaScriptNumber", s:purple, "", "")
 	call <SID>X("javaScriptMember", s:purple, "", "")
-	call <SID>X("jsFuncBlock", s:red, "", "")
+	call <SID>X("jsParen", s:red, "", "")
+	call <SID>X("jsBracket", s:red, "", "")
 
 	" HTML Highlighting
 	call <SID>X("htmlTag", s:gray, "", "")
