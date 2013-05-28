@@ -17,6 +17,7 @@ let s:darkblue = "0c94bf"
 let s:purple = "C678E6"
 let s:window = "262626"
 let s:gray = "585858"
+let s:darkgray = "333333"
 let s:highlight = ""
 
 " Console 256 Colours
@@ -337,6 +338,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("javaScriptMember", s:purple, "", "")
 	call <SID>X("jsLabel", s:red, "", "")
 	call <SID>X("jsFunction", s:purple, "", "")
+	call <SID>X("jsType", s:darkgray, "", "")
 
 	" HTML Highlighting
 	call <SID>X("htmlTag", s:gray, "", "")
