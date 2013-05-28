@@ -350,14 +350,15 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("htmlScriptTag", s:red, "", "")
 
     " (S)CSS Highlighting
-	call <SID>X("cssPositioningAttr", s:green, "", "")
-	call <SID>X("cssUIAttr", s:green, "", "")
-	call <SID>X("cssFlexibleBoxAttr", s:green, "", "")
-	call <SID>X("cssTextAttr", s:green, "", "")
-	call <SID>X("cssFontAttr", s:green, "", "")
-	call <SID>X("cssBorderOutlineAttr", s:green, "", "")
-	call <SID>X("cssCommonAttr", s:green, "", "")
-	call <SID>X("cssBoxAttr", s:green, "", "")
+	call <SID>X("cssPositioningAttr", s:aqua, "", "")
+	call <SID>X("cssUIAttr", s:aqua, "", "")
+	call <SID>X("cssFlexibleBoxAttr", s:aqua, "", "")
+	call <SID>X("cssTextAttr", s:aqua, "", "")
+	call <SID>X("cssFontAttr", s:aqua, "", "")
+	call <SID>X("cssBorderOutlineAttr", s:aqua, "", "")
+	call <SID>X("cssCommonAttr", s:aqua, "", "")
+	call <SID>X("cssBoxAttr", s:aqua, "", "")
+	call <SID>X("cssAuralAttr", s:aqua, "", "")
 
 	" Diff Highlighting
 	call <SID>X("diffAdded", s:green, "", "")
