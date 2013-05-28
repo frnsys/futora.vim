@@ -17,7 +17,7 @@ let s:darkblue = "0c94bf"
 let s:purple = "C678E6"
 let s:window = "262626"
 let s:gray = "585858"
-let s:darkgray = "333333"
+let s:darkgray = "4f4f4f"
 let s:highlight = ""
 
 " Console 256 Colours
