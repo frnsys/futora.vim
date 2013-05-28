@@ -283,7 +283,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Structure", s:purple, "", "")
 	call <SID>X("Function", s:blue, "", "")
 	call <SID>X("Constant", s:purple, "", "")
-	call <SID>X("String", s:green, "", "")
+	call <SID>X("String", s:aqua, "", "")
 	call <SID>X("Special", s:foreground, "", "")
 	call <SID>X("PreProc", s:purple, "", "")
 	call <SID>X("Operator", s:aqua, "", "none")
@@ -340,6 +340,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("jsLabel", s:red, "", "")
 	call <SID>X("jsFunction", s:purple, "", "")
 	call <SID>X("jsType", s:darkgray, "", "")
+	call <SID>X("jsOperator", s:green, "", "")
 
 	" HTML Highlighting
 	call <SID>X("htmlTag", s:gray, "", "")
