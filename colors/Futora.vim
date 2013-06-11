@@ -353,6 +353,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("jsConditional", s:red, "", "")
 	call <SID>X("jsCommentTodo", s:red, "", "")
 	call <SID>X("jsOperator", s:red, "", "")
+    call <SID>X("jsLabel", s:red, "", "")
 	call <SID>X("jsGlobalObjects", s:yellow, "", "")
 
 	" HTML Highlighting
