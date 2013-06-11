@@ -286,7 +286,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("String", s:aqua, "", "")
 	call <SID>X("Special", s:foreground, "", "")
 	call <SID>X("PreProc", s:purple, "", "")
-	call <SID>X("Operator", s:aqua, "", "none")
+	call <SID>X("Operator", s:red, "", "none")
 	call <SID>X("Type", s:blue, "", "none")
 	call <SID>X("Define", s:purple, "", "none")
 	call <SID>X("Include", s:blue, "", "")
@@ -325,10 +325,14 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	" Python Highlighting
 	call <SID>X("pythonInclude", s:purple, "", "")
 	call <SID>X("pythonStatement", s:purple, "", "")
-	call <SID>X("pythonConditional", s:purple, "", "")
-	call <SID>X("pythonRepeat", s:purple, "", "")
+	call <SID>X("pythonConditional", s:red, "", "")
+	call <SID>X("pythonOperator", s:red, "", "")
+	call <SID>X("pythonRepeat", s:red, "", "")
 	call <SID>X("pythonException", s:purple, "", "")
-	call <SID>X("pythonFunction", s:blue, "", "")
+	call <SID>X("pythonDefinition", s:darkgray, "", "")
+	call <SID>X("pythonFunction", s:yellow, "", "")
+	call <SID>X("pythonNumber", s:yellow, "", "")
+	call <SID>X("pythonBoolean", s:yellow, "", "")
 
 	" JavaScript Highlighting
 	call <SID>X("javaScriptBraces", s:red, "", "")
