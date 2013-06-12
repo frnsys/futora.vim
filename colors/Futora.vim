@@ -373,6 +373,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("cssCommonAttr", s:aqua, "", "")
 	call <SID>X("cssBoxAttr", s:aqua, "", "")
 	call <SID>X("cssAuralAttr", s:aqua, "", "")
+	call <SID>X("cssColor", s:yellow, "", "")
 
 	" Diff Highlighting
 	call <SID>X("diffAdded", s:green, "", "")
