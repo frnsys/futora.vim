@@ -9,16 +9,16 @@ let s:selection = "373b41"
 let s:line = "282a2e"
 let s:comment = "969896"
 let s:red = "F33B23"
-let s:yellow = "f0c674"
+let s:yellow = "FAB72E"
 let s:green = "4BF79F"
 let s:aqua = "34BFAC"
 let s:blue = "33CDFD"
 let s:darkblue = "0c94bf"
-let s:purple = "C678E6"
+let s:purple = "9D69E9"
 let s:window = "262626"
 let s:gray = "585858"
 let s:darkgray = "484848"
-let s:highlight = ""
+let s:highlight = "484848"
 
 " Console 256 Colours
 if !has("gui_running")
@@ -286,7 +286,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("String", s:aqua, "", "")
 	call <SID>X("Special", s:foreground, "", "")
 	call <SID>X("PreProc", s:purple, "", "")
-	call <SID>X("Operator", s:aqua, "", "none")
+	call <SID>X("Operator", s:red, "", "none")
 	call <SID>X("Type", s:blue, "", "none")
 	call <SID>X("Define", s:purple, "", "none")
 	call <SID>X("Include", s:blue, "", "")
@@ -324,23 +324,38 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
 	" Python Highlighting
 	call <SID>X("pythonInclude", s:purple, "", "")
+	call <SID>X("pythonPreCondit", s:red, "", "")
 	call <SID>X("pythonStatement", s:purple, "", "")
-	call <SID>X("pythonConditional", s:purple, "", "")
-	call <SID>X("pythonRepeat", s:purple, "", "")
+	call <SID>X("pythonConditional", s:red, "", "")
+	call <SID>X("pythonOperator", s:red, "", "")
+	call <SID>X("pythonRepeat", s:red, "", "")
 	call <SID>X("pythonException", s:purple, "", "")
-	call <SID>X("pythonFunction", s:blue, "", "")
+	call <SID>X("pythonDefinition", s:darkgray, "", "")
+	call <SID>X("pythonFunction", s:yellow, "", "")
+	call <SID>X("pythonNumber", s:yellow, "", "")
+	call <SID>X("pythonBoolean", s:yellow, "", "")
 
 	" JavaScript Highlighting
 	call <SID>X("javaScriptBraces", s:red, "", "")
 	call <SID>X("javaScriptFunction", s:purple, "", "")
 	call <SID>X("javaScriptConditional", s:purple, "", "")
-	call <SID>X("javaScriptRepeat", s:purple, "", "")
-	call <SID>X("javaScriptNumber", s:purple, "", "")
+	call <SID>X("javaScriptRepeat", s:red, "", "")
+	call <SID>X("javaScriptNumber", s:yellow, "", "")
 	call <SID>X("javaScriptMember", s:purple, "", "")
-	call <SID>X("jsLabel", s:red, "", "")
+	call <SID>X("jsBoolean", s:yellow, "", "")
+	call <SID>X("jsNumber", s:yellow, "", "")
+	call <SID>X("jsFloat", s:yellow, "", "")
 	call <SID>X("jsFunction", s:purple, "", "")
 	call <SID>X("jsType", s:darkgray, "", "")
-	call <SID>X("jsOperator", s:green, "", "")
+	call <SID>X("jsThis", s:darkgray, "", "")
+	call <SID>X("jsRepeat", s:red, "", "")
+	call <SID>X("jsNull", s:red, "", "")
+	call <SID>X("jsReturn", s:red, "", "")
+	call <SID>X("jsConditional", s:red, "", "")
+	call <SID>X("jsCommentTodo", s:red, "", "")
+	call <SID>X("jsOperator", s:red, "", "")
+    call <SID>X("jsLabel", s:red, "", "")
+	call <SID>X("jsGlobalObjects", s:yellow, "", "")
 
 	" HTML Highlighting
 	call <SID>X("htmlTag", s:gray, "", "")
@@ -359,6 +374,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("cssCommonAttr", s:aqua, "", "")
 	call <SID>X("cssBoxAttr", s:aqua, "", "")
 	call <SID>X("cssAuralAttr", s:aqua, "", "")
+	call <SID>X("cssColor", s:yellow, "", "")
 
 	" Diff Highlighting
 	call <SID>X("diffAdded", s:green, "", "")
