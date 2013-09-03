@@ -28,7 +28,18 @@ if !has("gui_running")
 	let s:selection = "585858"
 end
 
-set background=dark
+" Light variation
+if &background == "light"
+    let s:foreground = "2a2a2a"
+    let s:background = "efefef"
+    let s:highlight = "dddddd"
+    let s:line = "dedede"
+    let s:comment = "666666"
+    let s:purple = "0000FD"
+    let s:blue = "2598f9"
+    let s:aqua = "036d4e"
+    let s:green = "13be67"
+endif
 hi clear
 syntax reset
 
