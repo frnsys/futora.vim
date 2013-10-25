@@ -16,9 +16,9 @@ let s:blue = "33CDFD"
 let s:darkblue = "0c94bf"
 let s:purple = "9D69E9"
 let s:window = "262626"
-let s:gray = "585858"
-let s:darkgray = "484848"
-let s:highlight = "484848"
+let s:gray = "686868"
+let s:darkgray = "585858"
+let s:highlight = "585858"
 
 " Console 256 Colours
 if !has("gui_running")
@@ -345,6 +345,28 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("pythonFunction", s:yellow, "", "")
 	call <SID>X("pythonNumber", s:yellow, "", "")
 	call <SID>X("pythonBoolean", s:yellow, "", "")
+
+    " Scala Highlighting
+    call <SID>X("scalaKeyword", s:red, "", "")
+    call <SID>X("scalaKeywordModifier", s:red, "", "")
+    call <SID>X("scalaType", s:purple, "", "")
+    call <SID>X("scalaOperator", s:purple, "", "")
+    call <SID>X("scalaDef", s:darkgray, "", "")
+    call <SID>X("scalaVar", s:darkgray, "", "")
+    call <SID>X("scalaVal", s:darkgray, "", "")
+    call <SID>X("scalaClass", s:darkgray, "", "")
+    call <SID>X("scalaObject", s:darkgray, "", "")
+    call <SID>X("scalaTrait", s:darkgray, "", "")
+    call <SID>X("scalaDefName", s:yellow, "", "")
+    call <SID>X("scalaValName", s:yellow, "", "")
+    call <SID>X("scalaVarName", s:yellow, "", "")
+    call <SID>X("scalaClassName", s:yellow, "", "")
+    call <SID>X("scalaDefSpecializer", s:yellow, "", "")
+    call <SID>X("scalaClassSpecializer", s:yellow, "", "")
+    call <SID>X("scalaBackTick", s:yellow, "", "")
+    call <SID>X("scalaPackage", s:red, "", "")
+    call <SID>X("scalaImport", s:green, "", "")
+    call <SID>X("scalaBoolean", s:yellow, "", "")
 
 	" JavaScript Highlighting
 	call <SID>X("javaScriptBraces", s:red, "", "")
