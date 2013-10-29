@@ -22,7 +22,8 @@ let s:highlight = "585858"
 
 " Console 256 Colours
 if !has("gui_running")
-	let s:background = "2c2f33"
+	"let s:background = "2c2f33"
+    let s:background = "222222"
 	let s:window = "5e5e5e"
 	let s:line = "3a3a3a"
 	let s:selection = "585858"
