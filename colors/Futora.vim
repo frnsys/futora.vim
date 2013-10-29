@@ -308,6 +308,9 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	" Vim Highlighting
 	call <SID>X("vimCommand", s:blue, "", "none")
 
+	" Markdown Highlighting
+	call <SID>X("markdownH1", s:green, "", "none")
+
 	" C Highlighting
 	call <SID>X("cType", s:yellow, "", "")
 	call <SID>X("cStorageClass", s:purple, "", "")
