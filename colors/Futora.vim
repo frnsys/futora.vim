@@ -310,7 +310,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
 	" Markdown Highlighting
 	call <SID>X("markdownH1", s:yellow, "", "none")
-	call <SID>X("markdownListMarker", s:yellow, "", "none")
+	call <SID>X("markdownListMarker", s:red, "", "none")
 
 	" C Highlighting
 	call <SID>X("cType", s:yellow, "", "")
