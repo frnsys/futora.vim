@@ -382,6 +382,11 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("javaScriptRepeat", s:red, "", "")
 	call <SID>X("javaScriptNumber", s:yellow, "", "")
 	call <SID>X("javaScriptMember", s:purple, "", "")
+	call <SID>X("jsExceptions", s:red, "", "")
+	call <SID>X("jsBuiltins", s:red, "", "")
+	call <SID>X("jsException", s:yellow, "", "")
+	call <SID>X("jsKeyword", s:yellow, "", "")
+	call <SID>X("jsStatement", s:yellow, "", "")
 	call <SID>X("jsBoolean", s:yellow, "", "")
 	call <SID>X("jsNumber", s:yellow, "", "")
 	call <SID>X("jsFloat", s:yellow, "", "")
@@ -396,6 +401,8 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("jsOperator", s:red, "", "")
     call <SID>X("jsLabel", s:red, "", "")
 	call <SID>X("jsGlobalObjects", s:yellow, "", "")
+	call <SID>X("jsHtmlEvents", s:purple, "", "")
+	call <SID>X("jsCssStyles", s:purple, "", "")
 
 	" HTML Highlighting
 	call <SID>X("htmlTag", s:gray, "", "")
