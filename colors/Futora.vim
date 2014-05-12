@@ -320,6 +320,19 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("cConditional", s:purple, "", "")
 	call <SID>X("cRepeat", s:purple, "", "")
 
+	" C# Highlighting
+	call <SID>X("csType", s:yellow, "", "")
+	call <SID>X("csModifier", s:yellow, "", "")
+	call <SID>X("csUnspecifiedStatement", s:yellow, "", "")
+	call <SID>X("csException", s:red, "", "")
+	call <SID>X("csLinqKeyword", s:red, "", "")
+	call <SID>X("csStorage", s:red, "", "")
+	call <SID>X("csRepeat", s:red, "", "")
+	call <SID>X("csConditional", s:red, "", "")
+	call <SID>X("csLabel", s:red, "", "")
+	call <SID>X("csClass", s:green, "", "")
+	call <SID>X("csConstant", s:purple, "", "")
+
 	" PHP Highlighting
 	call <SID>X("phpVarSelector", s:red, "", "")
 	call <SID>X("phpKeyword", s:purple, "", "")
