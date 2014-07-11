@@ -42,7 +42,7 @@ if &background == "light"
     let s:aqua = "00AAAA"
     let s:lightgray = "9ABDC8"
     let s:green = "39D369"
-    let s:yellow = "F5871F"
+    let s:yellow = "ff9650"
 endif
 hi clear
 syntax reset
