@@ -17,6 +17,7 @@ let s:darkblue = "0c94bf"
 let s:purple = "9D69E9"
 let s:window = "262626"
 let s:gray = "686868"
+let s:lightgray = "999999"
 let s:darkgray = "585858"
 let s:highlight = "585858"
 
@@ -38,8 +39,9 @@ if &background == "light"
     let s:comment = "666666"
     let s:purple = "994DFB"
     let s:blue = "2598f9"
-    let s:aqua = "39D369"
-    let s:green = "13be67"
+    let s:aqua = "00AAAA"
+    let s:lightgray = "9ABDC8"
+    let s:green = "39D369"
     let s:yellow = "F5871F"
 endif
 hi clear
@@ -311,11 +313,22 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("vimCommand", s:blue, "", "none")
 
 	" Markdown Highlighting
-	call <SID>X("markdownH1", s:yellow, "", "none")
+	call <SID>X("markdownH1", s:red, "", "none")
+	call <SID>X("markdownHeadingRule", s:red, "", "none")
 	call <SID>X("markdownListMarker", s:red, "", "none")
-	call <SID>X("markdownHeadingRule", s:green, "", "none")
-	call <SID>X("markdownBold", s:yellow, "", "none")
-	call <SID>X("markdownItalic", s:green, "", "none")
+	call <SID>X("markdownOrderedListMarker", s:red, "", "none")
+	call <SID>X("markdownHeadingRule", s:aqua, "", "none")
+	call <SID>X("markdownBold", s:red, "", "bold")
+	call <SID>X("markdownItalic", s:purple, "", "underline")
+    call <SID>X("markdownBlockquote", s:blue, "", "none")
+    call <SID>X("markdownUrl", s:purple, "", "none")
+    call <SID>X("markdownId", s:red, "", "none")
+    call <SID>X("markdownIdDeclaration", s:red, "", "none")
+    call <SID>X("markdownLinkText", s:blue, "", "underline")
+    call <SID>X("markdownUrlTitle", s:blue, "", "none")
+    call <SID>X("markdownCode", s:lightgray, "", "none")
+    call <SID>X("markdownFootnote", s:purple, "", "none")
+    call <SID>X("markdownFootnoteDefinition", s:gray, "", "none")
 
 	" C Highlighting
 	call <SID>X("cType", s:yellow, "", "")
