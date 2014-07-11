@@ -314,6 +314,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
 	" Markdown Highlighting
 	call <SID>X("markdownH1", s:red, "", "none")
+	call <SID>X("markdownH2", s:red, "", "none")
 	call <SID>X("markdownHeadingRule", s:red, "", "none")
 	call <SID>X("markdownListMarker", s:red, "", "none")
 	call <SID>X("markdownOrderedListMarker", s:red, "", "none")
