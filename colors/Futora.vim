@@ -39,9 +39,9 @@ if &background == "light"
     let s:comment = "666666"
     let s:purple = "994DFB"
     let s:blue = "2598f9"
-    let s:aqua = "00AAAA"
+    let s:aqua = "6883a2"
     let s:lightgray = "9ABDC8"
-    let s:green = "39D369"
+    let s:green = "1bc670"
     let s:yellow = "ff9650"
 endif
 hi clear
@@ -438,7 +438,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("htmlTag", s:gray, "", "")
 	call <SID>X("htmlEndTag", s:gray, "", "")
 	call <SID>X("htmlTagName", s:blue, "", "")
-	call <SID>X("htmlArg", s:darkblue, "", "")
+	call <SID>X("htmlArg", s:green, "", "")
 	call <SID>X("htmlScriptTag", s:red, "", "")
 
     " (S)CSS Highlighting
