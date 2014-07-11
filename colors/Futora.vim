@@ -33,12 +33,13 @@ if &background == "light"
     let s:foreground = "2a2a2a"
     let s:background = "fcfaf8"
     let s:highlight = "dddddd"
-    let s:line = "dedede"
+    let s:line = "eeeeee"
     let s:comment = "666666"
-    let s:purple = "0000FD"
+    let s:purple = "994DFB"
     let s:blue = "2598f9"
-    let s:aqua = "036d4e"
+    let s:aqua = "39D369"
     let s:green = "13be67"
+    let s:yellow = "F5871F"
 endif
 hi clear
 syntax reset
@@ -255,7 +256,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
 	" Vim Highlighting
 	call <SID>X("Normal", s:foreground, s:background, "")
-	call <SID>X("LineNr", s:selection, "", "")
+	call <SID>X("LineNr", s:gray, s:highlight, "bold")
 	call <SID>X("NonText", s:selection, "", "")
 	call <SID>X("SpecialKey", s:selection, "", "")
 	call <SID>X("Search", s:background, s:yellow, "")
@@ -274,6 +275,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("FoldColumn", "", s:background, "")
 	if version >= 700
 		call <SID>X("CursorLine", "", s:line, "none")
+		call <SID>X("CursorLineNr", s:background, s:purple, "none")
 		call <SID>X("CursorColumn", "", s:line, "none")
 		call <SID>X("PMenu", s:foreground, s:selection, "none")
 		call <SID>X("PMenuSel", s:foreground, s:selection, "reverse")
