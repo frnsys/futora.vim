@@ -31,7 +31,7 @@ end
 " Light variation
 if &background == "light"
     let s:foreground = "2a2a2a"
-    let s:background = "efefef"
+    let s:background = "fcfaf8"
     let s:highlight = "dddddd"
     let s:line = "dedede"
     let s:comment = "666666"
