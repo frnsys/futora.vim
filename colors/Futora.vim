@@ -6,6 +6,7 @@
 let s:foreground = "c5c8c6"
 let s:background = "202020"
 let s:selection = "373b41"
+let s:white = "ffffff"
 let s:line = "282a2e"
 let s:comment = "969896"
 let s:red = "F33B23"
@@ -311,6 +312,15 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Include", s:blue, "", "")
 	call <SID>X("Conceal", s:purple, s:background, "")
 	"call <SID>X("Ignore", "666666", "", "")
+
+	" EasyMotion Highlighting
+	call <SID>X("EasyMotionTarget", s:red, "", "")
+	call <SID>X("EasyMotionShade", "dadada", "", "")
+	call <SID>X("EasyMotionTarget2First", s:aqua, "", "")
+	call <SID>X("EasyMotionTarget2Second", s:red, "", "")
+	call <SID>X("EasyMotionIncSearch", s:red, "", "")
+	call <SID>X("EasyMotionIncCursor", s:white, s:yellow, "")
+	call <SID>X("EasyMotionMoveHL", s:white, s:yellow, "")
 
 	" Vim Highlighting
 	call <SID>X("vimCommand", s:blue, "", "none")
