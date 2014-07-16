@@ -277,6 +277,9 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Folded", s:comment, s:background, "")
 	call <SID>X("FoldColumn", "", s:background, "")
 	if version >= 700
+        " Note: Cursor color doesn't seem to work in OSX terminal.
+        " To change it, you have to set it in your terminal preferences.
+		call <SID>X("Cursor", s:lightgray, s:purple, "none")
 		call <SID>X("CursorLine", "", s:line, "none")
 		call <SID>X("CursorLineNr", s:background, s:purple, "none")
 		call <SID>X("CursorColumn", "", s:line, "none")
