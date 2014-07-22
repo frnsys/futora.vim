@@ -21,6 +21,7 @@ let s:gray = "686868"
 let s:lightgray = "999999"
 let s:darkgray = "585858"
 let s:highlight = "585858"
+let s:emphasis = "FFE230"
 
 " Console 256 Colours
 if !has("gui_running")
@@ -417,6 +418,14 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("scalaPackage", s:red, "", "")
     call <SID>X("scalaImport", s:green, "", "")
     call <SID>X("scalaBoolean", s:yellow, "", "")
+
+    " Play Framework
+    call <SID>X("routesHttpMethod", s:lightgray, "", "")
+    call <SID>X("routesAction", s:blue, "", "")
+    call <SID>X("routesPath", s:gray, s:emphasis, "")
+    call <SID>X("routesParam", s:foreground, s:emphasis, "")
+    call <SID>X("phExprIdentifier", s:yellow, "", "")
+
 
 	" JavaScript Highlighting
 	call <SID>X("javaScriptBraces", s:red, "", "")
