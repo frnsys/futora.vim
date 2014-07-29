@@ -49,7 +49,7 @@ endif
 hi clear
 syntax reset
 
-let g:colors_name = "Futora"
+let g:colors_name = "futora"
 
 if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	" Returns an approximate grey index for the given grey level
