@@ -487,6 +487,12 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("ShowMarksHLu", s:yellow, s:background, "none")
     call <SID>X("ShowMarksHLm", s:aqua, s:background, "none")
 
+    " Unite
+    call <SID>X("uniteError", s:white, s:red, "none")
+    call <SID>X("uniteCandidateSourceName", s:aqua, "", "none")
+    call <SID>X("uniteCandidateInputKeyword", s:white, s:green, "none")
+    call <SID>X("uniteInputCommand", s:aqua, s:background, "none")
+
 	" Delete Functions
 	delf <SID>X
 	delf <SID>rgb
