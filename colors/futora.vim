@@ -348,6 +348,8 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("markdownFootnoteDefinition", s:gray, "", "none")
     call <SID>X("markdownCheckboxUnchecked", s:red, "", "none")
     call <SID>X("markdownCheckboxChecked", s:green, "", "none")
+    call <SID>X("markdownCheckboxUncheckedText", s:foreground, "", "none")
+    call <SID>X("markdownCheckboxCheckedText", s:gray, "", "none")
 
 	" C Highlighting
 	call <SID>X("cType", s:yellow, "", "")
