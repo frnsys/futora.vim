@@ -11,18 +11,17 @@ let s:line = "282a2e"
 let s:comment = "969896"
 let s:red = "fd2424"
 let s:yellow = "FAB72E"
-let s:green = "4BF79F"
+let s:green = "4ee77d"
 let s:aqua = "34BFAC"
-let s:blue = "33CDFD"
+let s:blue = "4beef4"
 let s:darkblue = "0c94bf"
-let s:purple = "9D69E9"
+let s:purple = "7864f2"
 let s:window = "262626"
 let s:gray = "686868"
 let s:lightgray = "999999"
 let s:darkgray = "585858"
 let s:highlight = "585858"
-let s:spell = "817070"
-let s:emphasis = "FFE230"
+let s:spell = "f26464"
 
 " Console 256 Colours
 if !has("gui_running")
@@ -316,26 +315,35 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
 	" Markdown Highlighting
 	call <SID>X("markdownH1", s:yellow, "", "none")
-	call <SID>X("markdownH2", s:red, "", "none")
+	call <SID>X("markdownH2", s:yellow, "", "none")
+	call <SID>X("markdownH3", s:white, "", "none")
+	call <SID>X("markdownH4", s:white, "", "none")
+	call <SID>X("markdownH5", s:white, "", "none")
 	call <SID>X("markdownHeadingRule", s:red, "", "none")
-	call <SID>X("markdownListMarker", s:yellow, "", "none")
+	call <SID>X("markdownRule", s:red, "", "none")
+	call <SID>X("markdownListMarker", s:red, "", "none")
 	call <SID>X("markdownOrderedListMarker", s:red, "", "none")
 	call <SID>X("markdownHeadingRule", s:green, "", "none")
 	call <SID>X("markdownBold", s:red, "", "bold")
 	call <SID>X("markdownItalic", s:green, "", "underline")
     call <SID>X("markdownBlockquote", s:blue, "", "none")
-    call <SID>X("markdownUrl", s:blue, "", "none")
+    call <SID>X("markdownUrl", s:gray, "", "none")
+    call <SID>X("markdownUrlDelimiter", s:purple, "", "none")
     call <SID>X("markdownId", s:red, "", "none")
     call <SID>X("markdownIdDeclaration", s:red, "", "none")
     call <SID>X("markdownLinkText", s:blue, "", "underline")
     call <SID>X("markdownUrlTitle", s:blue, "", "none")
-    call <SID>X("markdownCode", s:lightgray, "", "none")
+    call <SID>X("markdownCode", s:purple, "", "none")
+    call <SID>X("markdownCodeDelimiter", s:blue, "", "none")
+    call <SID>X("markdownCodeBlock", s:purple, "", "none")
     call <SID>X("markdownFootnote", s:purple, "", "none")
     call <SID>X("markdownFootnoteDefinition", s:gray, "", "none")
     call <SID>X("markdownCheckboxUnchecked", s:red, "", "none")
     call <SID>X("markdownCheckboxChecked", s:green, "", "none")
     call <SID>X("markdownUnchecked", s:foreground, "", "none")
     call <SID>X("markdownChecked", "c6c6c6", "", "none")
+    call <SID>X("markdownEqnIn", s:red, "", "none")
+    call <SID>X("markdownEqnDelimiter", s:darkgray, "", "none")
 
 	" C Highlighting
 	call <SID>X("cType", s:yellow, "", "")
@@ -410,13 +418,6 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("scalaPackage", s:red, "", "")
     call <SID>X("scalaImport", s:green, "", "")
     call <SID>X("scalaBoolean", s:yellow, "", "")
-
-    " Play Framework
-    call <SID>X("routesHttpMethod", s:lightgray, "", "")
-    call <SID>X("routesAction", s:blue, "", "")
-    call <SID>X("routesPath", s:gray, s:emphasis, "")
-    call <SID>X("routesParam", s:foreground, s:emphasis, "")
-    call <SID>X("phExprIdentifier", s:yellow, "", "")
 
 	" JavaScript Highlighting
 	call <SID>X("javaScriptBraces", s:red, "", "")
