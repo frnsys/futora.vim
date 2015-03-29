@@ -250,6 +250,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("LineNr", s:selection, "", "")
 	call <SID>X("NonText", s:selection, "", "")
 	call <SID>X("SpecialKey", s:selection, "", "")
+	call <SID>X("IncSearch", s:yellow, s:purple, "")
 	call <SID>X("Search", s:background, s:yellow, "")
 	call <SID>X("TabLine", s:darkgray, s:background, "none")
 	call <SID>X("TabLineFill", s:darkgray, s:background, "none")
@@ -484,6 +485,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("uniteCandidateSourceName", s:aqua, "", "none")
     call <SID>X("uniteCandidateInputKeyword", s:white, s:green, "none")
     call <SID>X("uniteInputCommand", s:aqua, s:background, "none")
+    call <SID>X("uniteInputLine", s:yellow, "", "none")
 
 	" Delete Functions
 	delf <SID>X
