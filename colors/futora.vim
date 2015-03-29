@@ -6,9 +6,10 @@
 let s:foreground = "c5c8c6"
 let s:background = "111111"
 let s:selection = "373b41"
+let s:white = "ffffff"
 let s:line = "282a2e"
 let s:comment = "969896"
-let s:red = "F33B23"
+let s:red = "fd2424"
 let s:yellow = "FAB72E"
 let s:green = "4BF79F"
 let s:aqua = "34BFAC"
@@ -16,9 +17,12 @@ let s:blue = "33CDFD"
 let s:darkblue = "0c94bf"
 let s:purple = "9D69E9"
 let s:window = "262626"
-let s:gray = "585858"
-let s:darkgray = "484848"
-let s:highlight = "484848"
+let s:gray = "686868"
+let s:lightgray = "999999"
+let s:darkgray = "585858"
+let s:highlight = "585858"
+let s:spell = "817070"
+let s:emphasis = "FFE230"
 
 " Console 256 Colours
 if !has("gui_running")
@@ -261,7 +265,11 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("MatchParen", "", s:selection, "")
 	call <SID>X("Folded", s:comment, s:background, "")
 	call <SID>X("FoldColumn", "", s:background, "")
+	call <SID>X("vimCommand", s:blue, "", "none")
 	if version >= 700
+        " Note: Cursor color doesn't seem to work in OSX terminal.
+        " To change it, you have to set it in your terminal preferences.
+		call <SID>X("Cursor", s:lightgray, s:yellow, "none")
 		call <SID>X("CursorLine", "", s:line, "none")
 		call <SID>X("CursorColumn", "", s:line, "none")
 		call <SID>X("PMenu", s:foreground, s:selection, "none")
@@ -293,14 +301,60 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Conceal", s:purple, s:background, "")
 	"call <SID>X("Ignore", "666666", "", "")
 
-	" Vim Highlighting
-	call <SID>X("vimCommand", s:blue, "", "none")
+    " Spell Check
+	call <SID>X("SpellBad", s:spell, s:background, "none")
+	call <SID>X("SpellCap", s:spell, s:background, "none")
+
+	" EasyMotion Highlighting
+	call <SID>X("EasyMotionTarget", s:red, "", "")
+	call <SID>X("EasyMotionShade", "dadada", "", "")
+	call <SID>X("EasyMotionTarget2First", s:aqua, "", "")
+	call <SID>X("EasyMotionTarget2Second", s:red, "", "")
+	call <SID>X("EasyMotionIncSearch", s:red, "", "")
+	call <SID>X("EasyMotionIncCursor", s:white, s:yellow, "")
+	call <SID>X("EasyMotionMoveHL", s:white, s:yellow, "")
+
+	" Markdown Highlighting
+	call <SID>X("markdownH1", s:yellow, "", "none")
+	call <SID>X("markdownH2", s:red, "", "none")
+	call <SID>X("markdownHeadingRule", s:red, "", "none")
+	call <SID>X("markdownListMarker", s:yellow, "", "none")
+	call <SID>X("markdownOrderedListMarker", s:red, "", "none")
+	call <SID>X("markdownHeadingRule", s:green, "", "none")
+	call <SID>X("markdownBold", s:red, "", "bold")
+	call <SID>X("markdownItalic", s:green, "", "underline")
+    call <SID>X("markdownBlockquote", s:blue, "", "none")
+    call <SID>X("markdownUrl", s:blue, "", "none")
+    call <SID>X("markdownId", s:red, "", "none")
+    call <SID>X("markdownIdDeclaration", s:red, "", "none")
+    call <SID>X("markdownLinkText", s:blue, "", "underline")
+    call <SID>X("markdownUrlTitle", s:blue, "", "none")
+    call <SID>X("markdownCode", s:lightgray, "", "none")
+    call <SID>X("markdownFootnote", s:purple, "", "none")
+    call <SID>X("markdownFootnoteDefinition", s:gray, "", "none")
+    call <SID>X("markdownCheckboxUnchecked", s:red, "", "none")
+    call <SID>X("markdownCheckboxChecked", s:green, "", "none")
+    call <SID>X("markdownUnchecked", s:foreground, "", "none")
+    call <SID>X("markdownChecked", "c6c6c6", "", "none")
 
 	" C Highlighting
 	call <SID>X("cType", s:yellow, "", "")
 	call <SID>X("cStorageClass", s:purple, "", "")
 	call <SID>X("cConditional", s:purple, "", "")
 	call <SID>X("cRepeat", s:purple, "", "")
+
+	" C# Highlighting
+	call <SID>X("csType", s:yellow, "", "")
+	call <SID>X("csModifier", s:yellow, "", "")
+	call <SID>X("csUnspecifiedStatement", s:yellow, "", "")
+	call <SID>X("csException", s:red, "", "")
+	call <SID>X("csLinqKeyword", s:red, "", "")
+	call <SID>X("csStorage", s:red, "", "")
+	call <SID>X("csRepeat", s:red, "", "")
+	call <SID>X("csConditional", s:red, "", "")
+	call <SID>X("csLabel", s:red, "", "")
+	call <SID>X("csClass", s:green, "", "")
+	call <SID>X("csConstant", s:purple, "", "")
 
 	" PHP Highlighting
 	call <SID>X("phpVarSelector", s:red, "", "")
@@ -335,6 +389,35 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("pythonNumber", s:yellow, "", "")
 	call <SID>X("pythonBoolean", s:yellow, "", "")
 
+    " Scala Highlighting
+    call <SID>X("scalaKeyword", s:red, "", "")
+    call <SID>X("scalaKeywordModifier", s:red, "", "")
+    call <SID>X("scalaType", s:purple, "", "")
+    call <SID>X("scalaOperator", s:purple, "", "")
+    call <SID>X("scalaDef", s:darkgray, "", "")
+    call <SID>X("scalaVar", s:darkgray, "", "")
+    call <SID>X("scalaVal", s:darkgray, "", "")
+    call <SID>X("scalaClass", s:darkgray, "", "")
+    call <SID>X("scalaObject", s:darkgray, "", "")
+    call <SID>X("scalaTrait", s:darkgray, "", "")
+    call <SID>X("scalaDefName", s:yellow, "", "")
+    call <SID>X("scalaValName", s:yellow, "", "")
+    call <SID>X("scalaVarName", s:yellow, "", "")
+    call <SID>X("scalaClassName", s:yellow, "", "")
+    call <SID>X("scalaDefSpecializer", s:yellow, "", "")
+    call <SID>X("scalaClassSpecializer", s:yellow, "", "")
+    call <SID>X("scalaBackTick", s:yellow, "", "")
+    call <SID>X("scalaPackage", s:red, "", "")
+    call <SID>X("scalaImport", s:green, "", "")
+    call <SID>X("scalaBoolean", s:yellow, "", "")
+
+    " Play Framework
+    call <SID>X("routesHttpMethod", s:lightgray, "", "")
+    call <SID>X("routesAction", s:blue, "", "")
+    call <SID>X("routesPath", s:gray, s:emphasis, "")
+    call <SID>X("routesParam", s:foreground, s:emphasis, "")
+    call <SID>X("phExprIdentifier", s:yellow, "", "")
+
 	" JavaScript Highlighting
 	call <SID>X("javaScriptBraces", s:red, "", "")
 	call <SID>X("javaScriptFunction", s:purple, "", "")
@@ -342,6 +425,11 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("javaScriptRepeat", s:red, "", "")
 	call <SID>X("javaScriptNumber", s:yellow, "", "")
 	call <SID>X("javaScriptMember", s:purple, "", "")
+	call <SID>X("jsExceptions", s:red, "", "")
+	call <SID>X("jsBuiltins", s:red, "", "")
+	call <SID>X("jsException", s:yellow, "", "")
+	call <SID>X("jsKeyword", s:yellow, "", "")
+	call <SID>X("jsStatement", s:yellow, "", "")
 	call <SID>X("jsBoolean", s:yellow, "", "")
 	call <SID>X("jsNumber", s:yellow, "", "")
 	call <SID>X("jsFloat", s:yellow, "", "")
@@ -356,6 +444,8 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("jsOperator", s:red, "", "")
     call <SID>X("jsLabel", s:red, "", "")
 	call <SID>X("jsGlobalObjects", s:yellow, "", "")
+	call <SID>X("jsHtmlEvents", s:purple, "", "")
+	call <SID>X("jsCssStyles", s:purple, "", "")
 
 	" HTML Highlighting
 	call <SID>X("htmlTag", s:gray, "", "")
@@ -385,6 +475,12 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("ShowMarksHLo", s:purple, s:background, "none")
     call <SID>X("ShowMarksHLu", s:yellow, s:background, "none")
     call <SID>X("ShowMarksHLm", s:aqua, s:background, "none")
+
+    " Unite
+    call <SID>X("uniteError", s:white, s:red, "none")
+    call <SID>X("uniteCandidateSourceName", s:aqua, "", "none")
+    call <SID>X("uniteCandidateInputKeyword", s:white, s:green, "none")
+    call <SID>X("uniteInputCommand", s:aqua, s:background, "none")
 
 	" Delete Functions
 	delf <SID>X
