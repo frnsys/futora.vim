@@ -400,6 +400,26 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("pythonNumber", s:yellow, "", "")
 	call <SID>X("pythonBoolean", s:yellow, "", "")
 
+	" Go Highlighting
+    " ref: <https://github.com/fatih/vim-go/blob/master/syntax/go.vim>
+	call <SID>X("goDirective", s:red, "", "")
+	call <SID>X("goDeclaration", s:green, "", "")
+	call <SID>X("goDeclType", s:red, "", "")
+	call <SID>X("goStatement", s:purple, "", "")
+	call <SID>X("goConditional", s:red, "", "")
+	call <SID>X("goLabel", s:red, "", "")
+	call <SID>X("goRepeat", s:red, "", "")
+	call <SID>X("goType", s:yellow, "", "")
+	call <SID>X("goSignedInts", s:yellow, "", "")
+	call <SID>X("goUnsignedInts", s:yellow, "", "")
+	call <SID>X("goFloats", s:yellow, "", "")
+	call <SID>X("goComplexes", s:yellow, "", "")
+	call <SID>X("goBuiltins", s:red, "", "")
+	call <SID>X("goBoolean", s:purple, "", "")
+	call <SID>X("goTodo", s:red, "", "")
+	call <SID>X("goOperator", s:green, "", "")
+	call <SID>X("goString", s:darkblue, "", "")
+
     " Scala Highlighting
     call <SID>X("scalaKeyword", s:red, "", "")
     call <SID>X("scalaKeywordModifier", s:red, "", "")
