@@ -3,35 +3,53 @@
 " Based off of Tomorrow Night (http://chriskempson.com)
 
 " Default GUI Colours
-let s:foreground = "c5c8c6"
-let s:background = "111111"
-let s:selection = "373b41"
 let s:white = "ffffff"
 let s:line = "282a2e"
-let s:comment = "969896"
-let s:red = "fd2424"
-let s:yellow = "FEDE3E"
+let s:red = "ff5a5a"
 let s:green = "4ee77d"
-let s:aqua = "00d787"
-let s:blue = "64CDFD"
-let s:darkblue = "0c94bf"
 let s:purple = "7864f2"
 let s:window = "262626"
 let s:gray = "686868"
 let s:lightgray = "999999"
 let s:darkgray = "585858"
-let s:highlight = "585858"
 let s:spell = "f26464"
+
+if &background == 'light'
+    let s:foreground = "3f3f3f"
+    let s:background = "DDDCE4"
+    let s:yellow = "ff2424"
+    let s:comment = "666666"
+    let s:highlight = "dddddd"
+    let s:selection = "eaeaea"
+    let s:blue = "2598f9"
+    let s:darkblue = "6883a2"
+    let s:aqua = "3EDE8C"
+else
+    let s:foreground = "c5c8c6"
+    let s:background = "111111"
+    let s:yellow = "FEDE3E"
+    let s:comment = "969896"
+    let s:highlight = "585858"
+    let s:selection = "373b41"
+    let s:blue = "64CDFD"
+    let s:darkblue = "0c94bf"
+    let s:aqua = "00d787"
+endif
 
 " Console 256 Colours
 if !has("gui_running")
-	let s:background = "303030"
-	let s:window = "5e5e5e"
-	let s:line = "3a3a3a"
-	let s:selection = "585858"
+    if &background == 'light'
+        let s:background = "f2f1f8"
+        let s:line = "eeeeee"
+        let s:selection = "eaeaea"
+    else
+	    let s:background = "303030"
+        let s:line = "3a3a3a"
+        let s:selection = "585858"
+    endif
+    let s:window = "5e5e5e"
 end
 
-set background=dark
 hi clear
 syntax reset
 
@@ -273,6 +291,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
         " To change it, you have to set it in your terminal preferences.
 		call <SID>X("Cursor", s:lightgray, s:yellow, "none")
 		call <SID>X("CursorLine", "", s:line, "none")
+		call <SID>X("CursorLineNr", s:white, s:blue, "none")
 		call <SID>X("CursorColumn", "", s:line, "none")
 		call <SID>X("PMenu", s:foreground, s:selection, "none")
 		call <SID>X("PMenuSel", s:foreground, s:selection, "reverse")
@@ -389,11 +408,11 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
 	" Python Highlighting
 	call <SID>X("pythonInclude", s:purple, "", "")
-	call <SID>X("pythonPreCondit", s:red, "", "")
+	call <SID>X("pythonPreCondit", s:darkblue, "", "")
 	call <SID>X("pythonStatement", s:purple, "", "")
-	call <SID>X("pythonConditional", s:red, "", "")
-	call <SID>X("pythonOperator", s:red, "", "")
-	call <SID>X("pythonRepeat", s:red, "", "")
+	call <SID>X("pythonConditional", s:blue, "", "")
+	call <SID>X("pythonOperator", s:blue, "", "")
+	call <SID>X("pythonRepeat", s:blue, "", "")
 	call <SID>X("pythonException", s:purple, "", "")
 	call <SID>X("pythonDefinition", s:darkgray, "", "")
 	call <SID>X("pythonFunction", s:yellow, "", "")
