@@ -17,10 +17,10 @@ let s:spell = "f26464"
 if &background == 'light'
     let s:foreground = "3f3f3f"
     let s:background = "DDDCE4"
-    let s:yellow = "ff2424"
+    let s:yellow = "f85e0b"
     let s:comment = "666666"
     let s:highlight = "dddddd"
-    let s:selection = "eaeaea"
+    let s:selection = "c3c3c3"
     let s:blue = "2598f9"
     let s:darkblue = "6883a2"
     let s:aqua = "3EDE8C"
@@ -41,7 +41,7 @@ if !has("gui_running")
     if &background == 'light'
         let s:background = "f2f1f8"
         let s:line = "eeeeee"
-        let s:selection = "eaeaea"
+        let s:selection = "c3c3c3"
     else
 	    let s:background = "303030"
         let s:line = "3a3a3a"
@@ -268,7 +268,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("LineNr", s:selection, "", "")
 	call <SID>X("NonText", s:selection, "", "")
 	call <SID>X("SpecialKey", s:selection, "", "")
-	call <SID>X("IncSearch", s:yellow, s:purple, "")
+	call <SID>X("IncSearch", s:white, s:purple, "")
 	call <SID>X("Search", s:background, s:yellow, "")
 	call <SID>X("TabLine", s:background, s:darkgray, "none")
 	call <SID>X("TabLineFill", s:background, s:darkgray, "none")
