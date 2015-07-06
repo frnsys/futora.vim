@@ -13,6 +13,7 @@ let s:gray = "686868"
 let s:lightgray = "999999"
 let s:darkgray = "585858"
 let s:spell = "f26464"
+let s:marker = "2598f9"
 
 if &background == 'light'
     let s:foreground = "3f3f3f"
@@ -291,7 +292,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
         " To change it, you have to set it in your terminal preferences.
 		call <SID>X("Cursor", s:lightgray, s:yellow, "none")
 		call <SID>X("CursorLine", "", s:line, "none")
-		call <SID>X("CursorLineNr", s:white, s:blue, "none")
+		call <SID>X("CursorLineNr", s:white, s:marker, "none")
 		call <SID>X("CursorColumn", "", s:line, "none")
 		call <SID>X("PMenu", s:foreground, s:selection, "none")
 		call <SID>X("PMenuSel", s:foreground, s:selection, "reverse")
