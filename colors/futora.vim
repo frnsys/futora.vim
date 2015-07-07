@@ -364,7 +364,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("markdownCheckboxChecked", s:green, "", "none")
     call <SID>X("markdownUnchecked", s:foreground, "", "none")
     call <SID>X("markdownChecked", "c6c6c6", "", "none")
-    call <SID>X("markdownEqnIn", s:red, "", "none")
+    call <SID>X("markdownEqnIn", s:blue, "", "none")
     call <SID>X("markdownEqnDelimiter", s:darkgray, "", "none")
 
 	" C Highlighting
