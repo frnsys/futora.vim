@@ -269,7 +269,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("NonText", s:selection, "", "")
 	call <SID>X("SpecialKey", s:selection, "", "")
 	call <SID>X("IncSearch", s:white, s:purple, "")
-	call <SID>X("Search", s:background, s:yellow, "")
+	call <SID>X("Search", s:white, s:purple, "")
 	call <SID>X("TabLine", s:background, s:darkgray, "none")
 	call <SID>X("TabLineFill", s:background, s:darkgray, "none")
 	call <SID>X("TabLineSel", s:background, s:green, "none")
