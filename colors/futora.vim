@@ -347,7 +347,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("markdownOrderedListMarker", s:red, "", "none")
 	call <SID>X("markdownHeadingRule", s:green, "", "none")
 	call <SID>X("markdownBold", s:red, "", "bold")
-	call <SID>X("markdownItalic", s:green, "", "underline")
+	call <SID>X("markdownItalic", s:blue, "", "underline")
     call <SID>X("markdownBlockquote", s:blue, "", "none")
     call <SID>X("markdownUrl", s:gray, "", "none")
     call <SID>X("markdownUrlDelimiter", s:purple, "", "none")
