@@ -307,8 +307,8 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Title", s:comment, "", "")
 	call <SID>X("Identifier", s:red, "", "none")
 	call <SID>X("Statement", s:foreground, "", "")
-	call <SID>X("Conditional", s:foreground, "", "")
-	call <SID>X("Repeat", s:foreground, "", "")
+	call <SID>X("Conditional", s:blue, "", "")
+	call <SID>X("Repeat", s:blue, "", "")
 	call <SID>X("Structure", s:purple, "", "")
 	call <SID>X("Function", s:blue, "", "")
 	call <SID>X("Constant", s:purple, "", "")
@@ -316,10 +316,11 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Special", s:foreground, "", "")
 	call <SID>X("PreProc", s:purple, "", "")
 	call <SID>X("Operator", s:red, "", "none")
-	call <SID>X("Type", s:blue, "", "none")
+	call <SID>X("Type", s:yellow, "", "none")
 	call <SID>X("Define", s:purple, "", "none")
 	call <SID>X("Include", s:blue, "", "")
 	call <SID>X("Conceal", s:purple, s:background, "")
+	call <SID>X("Keyword", s:purple, "", "")
 	"call <SID>X("Ignore", "666666", "", "")
 
     " Spell Check
@@ -366,6 +367,9 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("markdownChecked", "c6c6c6", "", "none")
     call <SID>X("markdownEqnIn", s:blue, "", "none")
     call <SID>X("markdownEqnDelimiter", s:darkgray, "", "none")
+
+    " Julia Highlighing
+	call <SID>X("juliaBlKeyword", s:aqua, "", "")
 
 	" C Highlighting
 	call <SID>X("cType", s:yellow, "", "")
